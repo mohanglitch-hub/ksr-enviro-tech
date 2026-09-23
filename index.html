@@ -28,7 +28,6 @@
                         softTeal: '#00A8A8',
                         lightGrey: '#F5F7FA',
                         dark: '#1A1A1A',
-                        whatsapp: '#25D366'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -45,15 +44,6 @@
         .service-card:hover .arrow-icon {
             transform: translateX(6px);
         }
-        /* WhatsApp Pulse Animation */
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-        .whatsapp-pulse {
-            animation: pulse-green 2s infinite;
-        }
     </style>
 </head>
 <body class="font-sans text-dark antialiased bg-white">
@@ -62,22 +52,22 @@
     <header class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-40 transition-all duration-300" id="header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Premium SVG Logo -->
-                <!-- Logo -->
-<a href="#home" class="flex-shrink-0 flex items-center gap-3 group">
-    <div class="relative w-11 h-11 flex items-center justify-center">
-        <!-- Water Drop -->
-        <div class="w-10 h-10 bg-gradient-to-br from-brightBlue to-blue-700 rounded-full flex items-center justify-center shadow-md relative overflow-hidden">
-            <i class="fas fa-tint text-white text-lg"></i>
-        </div>
-        <!-- Green Leaf -->
-        <i class="fas fa-leaf text-freshGreen text-sm absolute -top-1 -right-1 bg-white rounded-full p-1 shadow-sm"></i>
-    </div>
-    <div>
-        <h1 class="text-lg font-bold text-navy leading-tight tracking-tight">KSR Enviro Tech</h1>
-        <p class="text-[10px] text-softTeal font-semibold tracking-wide uppercase">Engineering Sustainable Water Solutions</p>
-    </div>
-</a>
+                
+                <!-- NEW LOGO STRUCTURE -->
+                <a href="#home" class="flex-shrink-0 flex items-center gap-3 group">
+                    <div class="relative w-11 h-11 flex items-center justify-center">
+                        <!-- Water Drop -->
+                        <div class="w-10 h-10 bg-gradient-to-br from-brightBlue to-blue-700 rounded-full flex items-center justify-center shadow-md relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-tint text-white text-lg"></i>
+                        </div>
+                        <!-- Green Leaf -->
+                        <i class="fas fa-leaf text-freshGreen text-sm absolute -top-1 -right-1 bg-white rounded-full p-1 shadow-sm"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-navy leading-tight tracking-tight">KSR Enviro Tech</h1>
+                        <p class="text-[10px] text-softTeal font-semibold tracking-wide uppercase">Engineering Sustainable Water Solutions</p>
+                    </div>
+                </a>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
@@ -120,9 +110,7 @@
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1920&h=1080&fit=crop" 
-                 alt="Modern Water Treatment Plant" 
-                 class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1920&h=1080&fit=crop" alt="Modern Water Treatment Plant" class="w-full h-full object-cover">
             <div class="gradient-overlay absolute inset-0"></div>
         </div>
 
@@ -197,9 +185,7 @@
                     </div>
                     <h3 class="text-navy font-bold text-lg mb-3">Sewage Treatment Plants (STP)</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">Design, supply, installation & commissioning of STP systems.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i>
-                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
 
                 <!-- Service Card 2 -->
@@ -209,9 +195,7 @@
                     </div>
                     <h3 class="text-navy font-bold text-lg mb-3">Effluent Treatment Plants (ETP)</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">Industrial wastewater treatment for regulatory compliance.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i>
-                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
 
                 <!-- Service Card 3 -->
@@ -221,9 +205,7 @@
                     </div>
                     <h3 class="text-navy font-bold text-lg mb-3">Reverse Osmosis & WTP</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">Clean and safe drinking water solutions.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i>
-                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
 
                 <!-- Service Card 4 -->
@@ -233,9 +215,7 @@
                     </div>
                     <h3 class="text-navy font-bold text-lg mb-3">Civil & Structural Works</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">Complete civil construction and structural support.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i>
-                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
 
                 <!-- Service Card 5 -->
@@ -245,9 +225,7 @@
                     </div>
                     <h3 class="text-navy font-bold text-lg mb-3">Engineering Design & Consultancy</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">Customized solutions and expert technical guidance.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i>
-                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
 
                 <!-- Service Card 6 -->
@@ -257,9 +235,7 @@
                     </div>
                     <h3 class="text-navy font-bold text-lg mb-3">Equipment Supply</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">High-quality, reliable water treatment equipment.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i>
-                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
 
                 <!-- Service Card 7 -->
@@ -269,9 +245,7 @@
                     </div>
                     <h3 class="text-navy font-bold text-lg mb-3">Chemical Supply</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">Specialized chemicals for optimal performance.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i>
-                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
 
                 <!-- Service Card 8 -->
@@ -281,9 +255,7 @@
                     </div>
                     <h3 class="text-navy font-bold text-lg mb-3">Erection, Commissioning & Support</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">Professional installation, commissioning and ongoing support.</p>
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i>
-                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
             </div>
         </div>
@@ -293,11 +265,8 @@
     <section id="about" class="py-24 bg-lightGrey">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
-                <!-- Image Side -->
                 <div class="relative rounded-2xl overflow-hidden shadow-xl h-full min-h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&h=800&fit=crop" 
-                         alt="Water Treatment Project" 
-                         class="absolute inset-0 w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&h=800&fit=crop" alt="Water Treatment Project" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-navy/20"></div>
                     <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg">
                         <div class="text-4xl font-extrabold text-brightBlue">100+</div>
@@ -305,7 +274,6 @@
                     </div>
                 </div>
 
-                <!-- Content Side -->
                 <div class="flex flex-col justify-center">
                     <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Your Trusted Partner in Water Treatment</h2>
                     <div class="w-16 h-1 bg-freshGreen mb-6"></div>
@@ -313,63 +281,28 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-shield-alt text-freshGreen text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-navy font-bold mb-1">Proven Experience</h4>
-                                <p class="text-gray-600 text-sm">100+ successful projects</p>
-                            </div>
+                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-shield-alt text-freshGreen text-lg"></i></div>
+                            <div><h4 class="text-navy font-bold mb-1">Proven Experience</h4><p class="text-gray-600 text-sm">100+ successful projects</p></div>
                         </div>
-
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-users text-freshGreen text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-navy font-bold mb-1">Expert Team</h4>
-                                <p class="text-gray-600 text-sm">Skilled & certified professionals</p>
-                            </div>
+                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-users text-freshGreen text-lg"></i></div>
+                            <div><h4 class="text-navy font-bold mb-1">Expert Team</h4><p class="text-gray-600 text-sm">Skilled & certified professionals</p></div>
                         </div>
-
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-award text-freshGreen text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-navy font-bold mb-1">High Quality Solutions</h4>
-                                <p class="text-gray-600 text-sm">Reliable & efficient systems</p>
-                            </div>
+                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-award text-freshGreen text-lg"></i></div>
+                            <div><h4 class="text-navy font-bold mb-1">High Quality Solutions</h4><p class="text-gray-600 text-sm">Reliable & efficient systems</p></div>
                         </div>
-
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-sync-alt text-freshGreen text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-navy font-bold mb-1">End-to-End Support</h4>
-                                <p class="text-gray-600 text-sm">From design to maintenance</p>
-                            </div>
+                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-sync-alt text-freshGreen text-lg"></i></div>
+                            <div><h4 class="text-navy font-bold mb-1">End-to-End Support</h4><p class="text-gray-600 text-sm">From design to maintenance</p></div>
                         </div>
-
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-clock text-freshGreen text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-navy font-bold mb-1">Timely Delivery</h4>
-                                <p class="text-gray-600 text-sm">On schedule, every time</p>
-                            </div>
+                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-clock text-freshGreen text-lg"></i></div>
+                            <div><h4 class="text-navy font-bold mb-1">Timely Delivery</h4><p class="text-gray-600 text-sm">On schedule, every time</p></div>
                         </div>
-
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fas fa-leaf text-freshGreen text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-navy font-bold mb-1">Sustainable Approach</h4>
-                                <p class="text-gray-600 text-sm">For a cleaner tomorrow</p>
-                            </div>
+                            <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-leaf text-freshGreen text-lg"></i></div>
+                            <div><h4 class="text-navy font-bold mb-1">Sustainable Approach</h4><p class="text-gray-600 text-sm">For a cleaner tomorrow</p></div>
                         </div>
                     </div>
                 </div>
@@ -387,48 +320,29 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
-                <!-- Step 1 -->
                 <div class="relative text-center group">
                     <div class="w-20 h-20 bg-white border-4 border-brightBlue rounded-full flex items-center justify-center mx-auto mb-6 text-brightBlue text-2xl font-extrabold shadow-lg group-hover:bg-brightBlue group-hover:text-white transition-all duration-300 relative z-10">01</div>
-                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors">
-                        <i class="fas fa-comments text-softTeal text-xl group-hover:text-white transition-colors"></i>
-                    </div>
+                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors"><i class="fas fa-comments text-softTeal text-xl group-hover:text-white transition-colors"></i></div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Consultation &<br>Requirement Analysis</h3>
                 </div>
-
-                <!-- Step 2 -->
                 <div class="relative text-center group">
                     <div class="w-20 h-20 bg-white border-4 border-brightBlue rounded-full flex items-center justify-center mx-auto mb-6 text-brightBlue text-2xl font-extrabold shadow-lg group-hover:bg-brightBlue group-hover:text-white transition-all duration-300 relative z-10">02</div>
-                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors">
-                        <i class="fas fa-drafting-compass text-softTeal text-xl group-hover:text-white transition-colors"></i>
-                    </div>
+                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors"><i class="fas fa-drafting-compass text-softTeal text-xl group-hover:text-white transition-colors"></i></div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Design &<br>Engineering</h3>
                 </div>
-
-                <!-- Step 3 -->
                 <div class="relative text-center group">
                     <div class="w-20 h-20 bg-white border-4 border-brightBlue rounded-full flex items-center justify-center mx-auto mb-6 text-brightBlue text-2xl font-extrabold shadow-lg group-hover:bg-brightBlue group-hover:text-white transition-all duration-300 relative z-10">03</div>
-                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors">
-                        <i class="fas fa-truck-loading text-softTeal text-xl group-hover:text-white transition-colors"></i>
-                    </div>
+                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors"><i class="fas fa-truck-loading text-softTeal text-xl group-hover:text-white transition-colors"></i></div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Supply &<br>Installation</h3>
                 </div>
-
-                <!-- Step 4 -->
                 <div class="relative text-center group">
                     <div class="w-20 h-20 bg-white border-4 border-brightBlue rounded-full flex items-center justify-center mx-auto mb-6 text-brightBlue text-2xl font-extrabold shadow-lg group-hover:bg-brightBlue group-hover:text-white transition-all duration-300 relative z-10">04</div>
-                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors">
-                        <i class="fas fa-vial text-softTeal text-xl group-hover:text-white transition-colors"></i>
-                    </div>
+                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors"><i class="fas fa-vial text-softTeal text-xl group-hover:text-white transition-colors"></i></div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Commissioning &<br>Testing</h3>
                 </div>
-
-                <!-- Step 5 -->
                 <div class="relative text-center group">
                     <div class="w-20 h-20 bg-white border-4 border-brightBlue rounded-full flex items-center justify-center mx-auto mb-6 text-brightBlue text-2xl font-extrabold shadow-lg group-hover:bg-brightBlue group-hover:text-white transition-all duration-300 relative z-10">05</div>
-                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors">
-                        <i class="fas fa-headset text-softTeal text-xl group-hover:text-white transition-colors"></i>
-                    </div>
+                    <div class="w-14 h-14 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-softTeal group-hover:text-white transition-colors"><i class="fas fa-headset text-softTeal text-xl group-hover:text-white transition-colors"></i></div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Ongoing<br>Support</h3>
                 </div>
             </div>
@@ -444,63 +358,42 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Project 1 -->
                 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72">
                     <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=400&h=300&fit=crop" alt="Industrial STP Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-white font-bold text-lg mb-2">Industrial STP Complex</h3>
-                        <div class="flex items-center gap-2 text-freshGreen">
-                            <i class="fas fa-map-marker-alt text-sm"></i>
-                            <span class="text-sm font-medium">Bangalore, Karnataka</span>
-                        </div>
+                        <div class="flex items-center gap-2 text-freshGreen"><i class="fas fa-map-marker-alt text-sm"></i><span class="text-sm font-medium">Bangalore, Karnataka</span></div>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
                 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72">
                     <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=400&h=300&fit=crop" alt="Residential ETP" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-white font-bold text-lg mb-2">Residential ETP Plant</h3>
-                        <div class="flex items-center gap-2 text-freshGreen">
-                            <i class="fas fa-map-marker-alt text-sm"></i>
-                            <span class="text-sm font-medium">Mumbai, Maharashtra</span>
-                        </div>
+                        <div class="flex items-center gap-2 text-freshGreen"><i class="fas fa-map-marker-alt text-sm"></i><span class="text-sm font-medium">Mumbai, Maharashtra</span></div>
                     </div>
                 </div>
-
-                <!-- Project 3 -->
                 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72">
                     <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop" alt="Commercial RO System" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-white font-bold text-lg mb-2">Commercial RO System</h3>
-                        <div class="flex items-center gap-2 text-freshGreen">
-                            <i class="fas fa-map-marker-alt text-sm"></i>
-                            <span class="text-sm font-medium">Chennai, Tamil Nadu</span>
-                        </div>
+                        <div class="flex items-center gap-2 text-freshGreen"><i class="fas fa-map-marker-alt text-sm"></i><span class="text-sm font-medium">Chennai, Tamil Nadu</span></div>
                     </div>
                 </div>
-
-                <!-- Project 4 -->
                 <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72">
                     <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=400&h=300&fit=crop" alt="Hospital Water Treatment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-white font-bold text-lg mb-2">Hospital Water Treatment</h3>
-                        <div class="flex items-center gap-2 text-freshGreen">
-                            <i class="fas fa-map-marker-alt text-sm"></i>
-                            <span class="text-sm font-medium">Hyderabad, Telangana</span>
-                        </div>
+                        <div class="flex items-center gap-2 text-freshGreen"><i class="fas fa-map-marker-alt text-sm"></i><span class="text-sm font-medium">Hyderabad, Telangana</span></div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-12">
-                <a href="#" class="inline-block border-2 border-navy text-navy px-8 py-3 rounded-lg font-semibold hover:bg-navy hover:text-white transition-all duration-300">
-                    View All Projects
-                </a>
+                <a href="#" class="inline-block border-2 border-navy text-navy px-8 py-3 rounded-lg font-semibold hover:bg-navy hover:text-white transition-all duration-300">View All Projects</a>
             </div>
         </div>
     </section>
@@ -518,30 +411,29 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <!-- Contact Form -->
+                
+                <!-- NEW CONTACT FORM STRUCTURE -->
                 <div id="formContainer" class="bg-white rounded-2xl p-8 shadow-2xl">
                     <h3 class="text-2xl font-bold text-navy mb-6">Send us a Message</h3>
                     <form id="contactForm" class="space-y-5">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brightBlue focus:border-brightBlue outline-none transition-all" placeholder="John Doe">
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brightBlue focus:border-brightBlue outline-none transition-all" placeholder="john@company.com">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brightBlue focus:border-brightBlue outline-none transition-all" placeholder="+91 98765 43210">
-                            </div>
+                            <label class="block text-sm font-medium text-navy mb-1">Full Name *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition" placeholder="Enter your full name">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brightBlue focus:border-brightBlue outline-none transition-all" placeholder="Tell us about your project requirements..."></textarea>
+                            <label class="block text-sm font-medium text-navy mb-1">Phone Number *</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition" placeholder="+91 98765 43210">
                         </div>
-                        <button type="submit" class="w-full bg-brightBlue text-white font-semibold py-3.5 rounded-lg hover:bg-navy transition-all duration-300 shadow-md flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                        <div>
+                            <label class="block text-sm font-medium text-navy mb-1">Email Address</label>
+                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-navy mb-1">Message *</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition resize-none" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brightBlue hover:bg-navy text-white font-semibold py-3.5 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
                         </button>
                     </form>
                 </div>
@@ -552,55 +444,31 @@
                         <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-brightBlue/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-phone-alt text-brightBlue text-xl"></i>
-                                </div>
+                                <div class="w-12 h-12 bg-brightBlue/20 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-phone-alt text-brightBlue text-xl"></i></div>
                                 <div>
                                     <div class="text-gray-300 text-sm font-medium mb-1">Phone</div>
                                     <a href="tel:+919843026353" class="text-white font-bold text-lg hover:text-brightBlue transition-colors">+91 9843026353</a>
                                 </div>
                             </div>
-
                             <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-softTeal/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-envelope text-softTeal text-xl"></i>
-                                </div>
+                                <div class="w-12 h-12 bg-softTeal/20 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-envelope text-softTeal text-xl"></i></div>
                                 <div>
                                     <div class="text-gray-300 text-sm font-medium mb-1">Email</div>
                                     <a href="mailto:info@ksrenvirotech.com" class="text-white font-bold text-lg hover:text-softTeal transition-colors break-all">info@ksrenvirotech.com</a>
                                 </div>
                             </div>
-
                             <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-freshGreen/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt text-freshGreen text-xl"></i>
-                                </div>
+                                <div class="w-12 h-12 bg-freshGreen/20 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-freshGreen text-xl"></i></div>
                                 <div>
                                     <div class="text-gray-300 text-sm font-medium mb-1">Location</div>
                                     <div class="text-white font-bold text-lg">Bengaluru, India</div>
                                 </div>
                             </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-whatsapp/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fab fa-whatsapp text-whatsapp text-xl"></i>
-                                </div>
-                                <div>
-                                    <div class="text-gray-300 text-sm font-medium mb-1">WhatsApp</div>
-                                    <a href="https://wa.me/919843026353" target="_blank" class="text-white font-bold text-lg hover:text-whatsapp transition-colors">Chat on WhatsApp</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- Quick Action Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="tel:+919843026353" class="flex-1 bg-brightBlue text-white px-6 py-4 rounded-lg font-semibold text-center hover:bg-white hover:text-brightBlue transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="mailto:info@ksrenvirotech.com" class="flex-1 bg-transparent border-2 border-white text-white px-6 py-4 rounded-lg font-semibold text-center hover:bg-white hover:text-navy transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2">
-                            <i class="fas fa-envelope"></i> Email Us
-                        </a>
+                        <a href="tel:+919843026353" class="flex-1 bg-brightBlue text-white px-6 py-4 rounded-lg font-semibold text-center hover:bg-white hover:text-brightBlue transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"><i class="fas fa-phone"></i> Call Now</a>
+                        <a href="mailto:info@ksrenvirotech.com" class="flex-1 bg-transparent border-2 border-white text-white px-6 py-4 rounded-lg font-semibold text-center hover:bg-white hover:text-navy transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"><i class="fas fa-envelope"></i> Email Us</a>
                     </div>
                 </div>
             </div>
@@ -611,29 +479,21 @@
     <footer class="bg-slate-900 text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <!-- Company Info -->
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 4C20 4 6 20 6 28C6 35.732 12.268 42 20 42C27.732 42 34 35.732 34 28C34 20 20 4 20 4Z" fill="#0066CC"/>
-                            <path d="M26 10C26 10 34 14 34 22C34 26.4183 30.4183 30 26 30C21.5817 30 18 26.4183 18 22C18 14 26 10 26 10Z" fill="#7AC943"/>
-                            <path d="M26 10C26 10 24 18 20 24" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
+                        <div class="relative w-10 h-10 flex items-center justify-center">
+                            <div class="w-9 h-9 bg-gradient-to-br from-brightBlue to-blue-700 rounded-full flex items-center justify-center shadow-md relative overflow-hidden">
+                                <i class="fas fa-tint text-white text-base"></i>
+                            </div>
+                            <i class="fas fa-leaf text-freshGreen text-xs absolute -top-0.5 -right-0.5 bg-slate-900 rounded-full p-0.5 shadow-sm"></i>
+                        </div>
                         <div>
                             <h3 class="font-bold text-lg leading-tight">KSR Enviro Tech</h3>
                         </div>
                     </div>
                     <p class="text-softTeal text-sm font-medium mb-4">Engineering Sustainable Water Solutions</p>
                     <p class="text-gray-400 text-sm mb-6 leading-relaxed">Trusted partner for STP, ETP & RO systems across India, delivering clean water solutions since 2021.</p>
-                    <div class="flex gap-3">
-                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-brightBlue transition-colors"><i class="fab fa-linkedin-in text-sm"></i></a>
-                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-brightBlue transition-colors"><i class="fab fa-twitter text-sm"></i></a>
-                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-brightBlue transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
-                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-brightBlue transition-colors"><i class="fab fa-instagram text-sm"></i></a>
-                    </div>
                 </div>
-
-                <!-- Quick Links -->
                 <div>
                     <h4 class="font-bold text-lg mb-5 text-white">Quick Links</h4>
                     <ul class="space-y-3">
@@ -644,8 +504,6 @@
                         <li><a href="#contact" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Contact Us</a></li>
                     </ul>
                 </div>
-
-                <!-- Services -->
                 <div>
                     <h4 class="font-bold text-lg mb-5 text-white">Our Services</h4>
                     <ul class="space-y-3">
@@ -653,35 +511,18 @@
                         <li><a href="#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Effluent Treatment Plants</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> RO & Water Treatment</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Civil Works</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Equipment Supply</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Info -->
                 <div>
                     <h4 class="font-bold text-lg mb-5 text-white">Contact Us</h4>
                     <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-softTeal mt-1"></i>
-                            <span class="text-gray-400 text-sm">Bengaluru, Karnataka, India</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-phone-alt text-softTeal"></i>
-                            <a href="tel:+919843026353" class="text-gray-400 text-sm hover:text-white transition-colors">+91 9843026353</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-softTeal"></i>
-                            <a href="mailto:info@ksrenvirotech.com" class="text-gray-400 text-sm hover:text-white transition-colors">info@ksrenvirotech.com</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-clock text-softTeal"></i>
-                            <span class="text-gray-400 text-sm">Mon - Sat: 9:00 AM - 6:00 PM</span>
-                        </li>
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-softTeal mt-1"></i><span class="text-gray-400 text-sm">Bengaluru, Karnataka, India</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-softTeal"></i><a href="tel:+919843026353" class="text-gray-400 text-sm hover:text-white transition-colors">+91 9843026353</a></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-softTeal"></i><a href="mailto:info@ksrenvirotech.com" class="text-gray-400 text-sm hover:text-white transition-colors">info@ksrenvirotech.com</a></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-clock text-softTeal"></i><span class="text-gray-400 text-sm">Mon - Sat: 9:00 AM - 6:00 PM</span></li>
                     </ul>
                 </div>
             </div>
-
-            <!-- Bottom Bar -->
             <div class="border-t border-slate-800 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                     <p class="text-gray-500 text-sm">&copy; 2026 KSR Enviro Tech and Solution. All rights reserved.</p>
@@ -694,20 +535,18 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/919843026353" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300 group"
-   aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp text-3xl"></i>
-    
-    <!-- Tooltip -->
-    <span class="absolute right-16 bg-navy text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-        Chat with us
-    </span>
-</a>
+    <!-- NEW FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919843026353" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300 group"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-16 bg-navy text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-md">
+            Chat with us
+        </span>
+    </a>
 
     <!-- JavaScript -->
     <script>
@@ -749,60 +588,35 @@
             });
         });
 
-        // Contact Form Handling (Success Message + WhatsApp Redirect)
-    <!-- Contact Form -->
-<form id="contactForm" class="space-y-5">
-    <div>
-        <label class="block text-sm font-medium text-navy mb-1">Full Name *</label>
-        <input type="text" name="name" required
-               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition"
-               placeholder="Enter your full name">
-    </div>
+        // NEW CONTACT FORM WHATSAPP LOGIC
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    <div>
-        <label class="block text-sm font-medium text-navy mb-1">Phone Number *</label>
-        <input type="tel" name="phone" required
-               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition"
-               placeholder="+91 98765 43210">
-    </div>
+            const name = this.name.value.trim();
+            const phone = this.phone.value.trim();
+            const email = this.email.value.trim();
+            const message = this.message.value.trim();
 
-    <div>
-        <label class="block text-sm font-medium text-navy mb-1">Email Address</label>
-        <input type="email" name="email"
-               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition"
-               placeholder="your@email.com">
-    </div>
+            const text = `Hello KSR Enviro Tech,%0A%0A` +
+                         `Name: ${name}%0A` +
+                         `Phone: ${phone}%0A` +
+                         `Email: ${email}%0A%0A` +
+                         `Message: ${message}`;
 
-    <div>
-        <label class="block text-sm font-medium text-navy mb-1">Message *</label>
-        <textarea name="message" rows="4" required
-                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition resize-none"
-                  placeholder="Tell us about your project..."></textarea>
-    </div>
-
-    <button type="submit"
-            class="w-full bg-brightBlue hover:bg-navy text-white font-semibold py-3.5 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
-        <i class="fab fa-whatsapp"></i>
-        Send via WhatsApp
-    </button>
-</form>
-
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = this.name.value.trim();
-        const phone = this.phone.value.trim();
-        const email = this.email.value.trim();
-        const message = this.message.value.trim();
-
-        const text = `Hello KSR Enviro Tech,%0A%0A` +
-                     `Name: ${name}%0A` +
-                     `Phone: ${phone}%0A` +
-                     `Email: ${email}%0A%0A` +
-                     `Message: ${message}`;
-
-        const whatsappURL = `https://wa.me/919843026353?text=${text}`;
-        window.open(whatsappURL, '_blank');
-    });
-</script>
+            const whatsappURL = `https://wa.me/919843026353?text=${text}`;
+            window.open(whatsappURL, '_blank');
+            
+            // Optional: Show a quick success visual feedback
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Opening WhatsApp...';
+            btn.classList.add('bg-freshGreen');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-freshGreen');
+                this.reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
