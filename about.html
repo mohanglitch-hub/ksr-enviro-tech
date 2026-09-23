@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | KSR Enviro Tech and Solution</title>
+    <meta name="description" content="Learn about KSR Enviro Tech and Solution, Bengaluru's trusted partner for sustainable water treatment solutions with 100+ projects across India.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A2540',
+                        brightBlue: '#0066CC',
+                        freshGreen: '#7AC943',
+                        softTeal: '#00A8A8',
+                        lightGrey: '#F5F7FA',
+                        dark: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark antialiased bg-white">
+
+    <!-- Header (Consistent with Homepage) -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <div class="w-10 h-10 bg-brightBlue rounded-lg flex items-center justify-center relative shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fas fa-tint text-white text-lg"></i>
+                        <i class="fas fa-leaf text-freshGreen text-xs absolute -top-1.5 -right-1.5 bg-white rounded-full p-0.5 shadow-sm"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-navy leading-tight tracking-tight">KSR Enviro Tech</h1>
+                        <p class="text-[10px] text-softTeal font-semibold tracking-wide uppercase">Engineering Sustainable Water Solutions</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Home</a>
+                    <a href="about.html" class="text-brightBlue font-semibold transition-colors duration-200 text-sm">About Us</a>
+                    <a href="index.html#services" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Services</a>
+                    <a href="index.html#projects" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Projects</a>
+                    <a href="index.html#contact" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Contact Us</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="index.html#contact" class="bg-brightBlue text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-navy transition-all duration-300 shadow-md hover:shadow-lg">
+                        Get a Quote
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy hover:text-brightBlue focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-lg absolute w-full">
+            <div class="px-4 pt-4 pb-6 space-y-3">
+                <a href="index.html" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-brightBlue font-semibold">About Us</a>
+                <a href="index.html#services" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium">Services</a>
+                <a href="index.html#projects" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium">Projects</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium">Contact Us</a>
+                <a href="index.html#contact" class="block mt-4 bg-brightBlue text-white px-6 py-3 rounded-lg font-semibold text-center">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1920&h=600&fit=crop" 
+                 alt="Water Treatment Facility" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-navy/80"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">About Us</h1>
+            <p class="text-xl text-softTeal font-medium mb-6">Engineering Sustainable Water Solutions</p>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                KSR Enviro Tech and Solution is a premier environmental engineering firm dedicated to delivering clean, safe, and sustainable water treatment solutions for industries, communities, and commercial establishments across India.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop" 
+                         alt="Engineering Team" 
+                         class="rounded-2xl shadow-xl w-full object-cover">
+                    <div class="absolute -bottom-6 -right-6 bg-brightBlue text-white p-6 rounded-xl shadow-xl hidden md:block">
+                        <div class="text-4xl font-extrabold">100+</div>
+                        <div class="text-sm font-medium opacity-90">Projects Delivered</div>
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div>
+                    <div class="w-16 h-1 bg-freshGreen mb-6"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">Our Journey</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Founded in 2021 in Bengaluru, KSR Enviro Tech and Solution was born out of a vision to bridge the gap between industrial water needs and environmental sustainability. 
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        What started as a small, dedicated team of environmental engineers has rapidly grown into a trusted industry partner. Today, we have successfully executed over 100 projects across India, ranging from large-scale industrial Effluent Treatment Plants (ETP) to community Sewage Treatment Plants (STP) and advanced Reverse Osmosis (RO) systems.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Our growth is driven by a relentless commitment to quality, timely execution, and a deep understanding of the unique challenges faced by Indian industries and municipalities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-20 bg-lightGrey">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Driving Our Purpose</h2>
+                <div class="w-16 h-1 bg-freshGreen mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Mission Card -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-brightBlue/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-brightBlue text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-navy mb-4">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        To deliver innovative, reliable, and sustainable water treatment solutions that protect the environment, conserve natural resources, and empower industries to operate responsibly. We strive to provide end-to-end engineering excellence from design to commissioning.
+                    </p>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-freshGreen/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-freshGreen text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-navy mb-4">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        To be India's most trusted and preferred environmental engineering partner, recognized for our technical expertise, unwavering quality, and commitment to building a cleaner, greener tomorrow for future generations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Why Choose KSR Enviro Tech</h2>
+                <div class="w-16 h-1 bg-freshGreen mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg">We don't just build plants; we build long-term partnerships based on trust and results.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Point 1 -->
+                <div class="p-8 rounded-xl border border-gray-100 hover:border-brightBlue/30 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-softTeal/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-trophy text-softTeal text-xl"></i>
+                    </div>
+                    <h4 class="text-navy font-bold text-lg mb-2">Proven Experience</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">A strong track record of 100+ successfully delivered projects across diverse sectors.</p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="p-8 rounded-xl border border-gray-100 hover:border-brightBlue/30 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-softTeal/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-cubes text-softTeal text-xl"></i>
+                    </div>
+                    <h4 class="text-navy font-bold text-lg mb-2">End-to-End Solutions</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">From initial consultation and design to supply, installation, and ongoing maintenance.</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="p-8 rounded-xl border border-gray-100 hover:border-brightBlue/30 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-softTeal/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-microscope text-softTeal text-xl"></i>
+                    </div>
+                    <h4 class="text-navy font-bold text-lg mb-2">Technical Expertise</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">A highly skilled team of certified engineers leveraging the latest water treatment technologies.</p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="p-8 rounded-xl border border-gray-100 hover:border-brightBlue/30 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-softTeal/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-award text-softTeal text-xl"></i>
+                    </div>
+                    <h4 class="text-navy font-bold text-lg mb-2">Quality Focus</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">We use only premium-grade materials and equipment to ensure long-lasting, efficient systems.</p>
+                </div>
+
+                <!-- Point 5 -->
+                <div class="p-8 rounded-xl border border-gray-100 hover:border-brightBlue/30 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-softTeal/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-handshake text-softTeal text-xl"></i>
+                    </div>
+                    <h4 class="text-navy font-bold text-lg mb-2">Customer-Centric Approach</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Tailored solutions designed around your specific requirements, budget, and timeline.</p>
+                </div>
+
+                <!-- Point 6 -->
+                <div class="p-8 rounded-xl border border-gray-100 hover:border-brightBlue/30 hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-softTeal/10 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-leaf text-softTeal text-xl"></i>
+                    </div>
+                    <h4 class="text-navy font-bold text-lg mb-2">Sustainable Practices</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Eco-friendly designs that maximize water recovery and minimize environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="py-20 bg-lightGrey">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Our Core Values</h2>
+                <div class="w-16 h-1 bg-freshGreen mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Value 1 -->
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-brightBlue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-brightBlue font-bold text-lg">01</span>
+                    </div>
+                    <h4 class="text-navy font-bold">Integrity</h4>
+                </div>
+                <!-- Value 2 -->
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-brightBlue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-brightBlue font-bold text-lg">02</span>
+                    </div>
+                    <h4 class="text-navy font-bold">Quality</h4>
+                </div>
+                <!-- Value 3 -->
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-brightBlue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-brightBlue font-bold text-lg">03</span>
+                    </div>
+                    <h4 class="text-navy font-bold">Reliability</h4>
+                </div>
+                <!-- Value 4 -->
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-brightBlue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-brightBlue font-bold text-lg">04</span>
+                    </div>
+                    <h4 class="text-navy font-bold">Sustainability</h4>
+                </div>
+                <!-- Value 5 -->
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-1 lg:col-span-1">
+                    <div class="w-10 h-10 bg-brightBlue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-brightBlue font-bold text-lg">05</span>
+                    </div>
+                    <h4 class="text-navy font-bold">Customer Commitment</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24 bg-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Let’s Work Together</h2>
+            <p class="text-gray-300 text-xl mb-10 max-w-2xl mx-auto">Partner with us to build a sustainable, efficient, and compliant water treatment system for your facility.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="index.html#contact" class="bg-brightBlue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-brightBlue transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-file-invoice"></i> Get a Quote
+                </a>
+                <a href="index.html#contact" class="bg-white text-navy px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brightBlue hover:text-white transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-phone"></i> Contact Us
+                </a>
+            </div>
+
+            <!-- Contact Details Box -->
+            <div class="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center p-2">
+                        <div class="w-12 h-12 bg-brightBlue/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-phone-alt text-brightBlue text-xl"></i>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-1 font-medium">Phone</div>
+                        <a href="tel:+919843026353" class="text-navy font-bold hover:text-brightBlue transition-colors">+91 9843026353</a>
+                    </div>
+
+                    <div class="text-center p-2">
+                        <div class="w-12 h-12 bg-softTeal/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-envelope text-softTeal text-xl"></i>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-1 font-medium">Email</div>
+                        <a href="mailto:info@ksrenvirotech.com" class="text-navy font-bold hover:text-softTeal transition-colors text-sm break-all">info@ksrenvirotech.com</a>
+                    </div>
+
+                    <div class="text-center p-2">
+                        <div class="w-12 h-12 bg-freshGreen/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-map-marker-alt text-freshGreen text-xl"></i>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-1 font-medium">Location</div>
+                        <div class="text-navy font-bold text-sm">Bengaluru, India</div>
+                    </div>
+
+                    <div class="text-center p-2">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-1 font-medium">WhatsApp</div>
+                        <a href="https://wa.me/919843026353" target="_blank" class="text-navy font-bold hover:text-green-600 transition-colors">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent with Homepage) -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-brightBlue rounded-lg flex items-center justify-center relative">
+                            <i class="fas fa-tint text-white text-lg"></i>
+                            <i class="fas fa-leaf text-freshGreen text-xs absolute -top-1.5 -right-1.5 bg-slate-900 rounded-full p-0.5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg leading-tight">KSR Enviro Tech</h3>
+                        </div>
+                    </div>
+                    <p class="text-softTeal text-sm font-medium mb-4">Engineering Sustainable Water Solutions</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Trusted partner for STP, ETP & RO systems across India, delivering clean water solutions since 2021.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-brightBlue transition-colors"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-brightBlue transition-colors"><i class="fab fa-twitter text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-brightBlue transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-brightBlue transition-colors"><i class="fab fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-5 text-white">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> About Us</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Services</a></li>
+                        <li><a href="index.html#projects" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Projects</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-bold text-lg mb-5 text-white">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Sewage Treatment Plants</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Effluent Treatment Plants</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> RO & Water Treatment</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Civil Works</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Equipment Supply</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold text-lg mb-5 text-white">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-softTeal mt-1"></i>
+                            <span class="text-gray-400 text-sm">Bengaluru, Karnataka, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-softTeal"></i>
+                            <a href="tel:+919843026353" class="text-gray-400 text-sm hover:text-white transition-colors">+91 9843026353</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-softTeal"></i>
+                            <a href="mailto:info@ksrenvirotech.com" class="text-gray-400 text-sm hover:text-white transition-colors">info@ksrenvirotech.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-clock text-softTeal"></i>
+                            <span class="text-gray-400 text-sm">Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-slate-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-500 text-sm">&copy; 2026 KSR Enviro Tech and Solution. All rights reserved.</p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="#" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
