@@ -1,2 +1,1 @@
-﻿# ksr-enviro-tech
 
