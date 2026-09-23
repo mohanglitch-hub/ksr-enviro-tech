@@ -63,19 +63,21 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Premium SVG Logo -->
-                <a href="#home" class="flex-shrink-0 flex items-center gap-3 group">
-                    <svg class="w-10 h-10 transition-transform group-hover:scale-105" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Water Drop -->
-                        <path d="M20 4C20 4 6 20 6 28C6 35.732 12.268 42 20 42C27.732 42 34 35.732 34 28C34 20 20 4 20 4Z" fill="#0066CC"/>
-                        <!-- Green Leaf -->
-                        <path d="M26 10C26 10 34 14 34 22C34 26.4183 30.4183 30 26 30C21.5817 30 18 26.4183 18 22C18 14 26 10 26 10Z" fill="#7AC943"/>
-                        <path d="M26 10C26 10 24 18 20 24" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                    <div>
-                        <h1 class="text-lg font-bold text-navy leading-tight tracking-tight">KSR Enviro Tech</h1>
-                        <p class="text-[10px] text-softTeal font-semibold tracking-wide uppercase">Engineering Sustainable Water Solutions</p>
-                    </div>
-                </a>
+                <!-- Logo -->
+<a href="#home" class="flex-shrink-0 flex items-center gap-3 group">
+    <div class="relative w-11 h-11 flex items-center justify-center">
+        <!-- Water Drop -->
+        <div class="w-10 h-10 bg-gradient-to-br from-brightBlue to-blue-700 rounded-full flex items-center justify-center shadow-md relative overflow-hidden">
+            <i class="fas fa-tint text-white text-lg"></i>
+        </div>
+        <!-- Green Leaf -->
+        <i class="fas fa-leaf text-freshGreen text-sm absolute -top-1 -right-1 bg-white rounded-full p-1 shadow-sm"></i>
+    </div>
+    <div>
+        <h1 class="text-lg font-bold text-navy leading-tight tracking-tight">KSR Enviro Tech</h1>
+        <p class="text-[10px] text-softTeal font-semibold tracking-wide uppercase">Engineering Sustainable Water Solutions</p>
+    </div>
+</a>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
@@ -693,12 +695,19 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919843026353" target="_blank" class="fixed bottom-6 right-6 z-50 bg-whatsapp text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center group whatsapp-pulse">
-        <i class="fab fa-whatsapp text-3xl"></i>
-        <span class="absolute right-full mr-3 bg-white text-dark text-sm font-semibold px-3 py-1.5 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-            Chat with us
-        </span>
-    </a>
+    <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919843026353" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300 group"
+   aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp text-3xl"></i>
+    
+    <!-- Tooltip -->
+    <span class="absolute right-16 bg-navy text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+        Chat with us
+    </span>
+</a>
 
     <!-- JavaScript -->
     <script>
@@ -741,28 +750,59 @@
         });
 
         // Contact Form Handling (Success Message + WhatsApp Redirect)
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            // 1. Show Success Message in the form container
-            const formContainer = document.getElementById('formContainer');
-            formContainer.innerHTML = `
-                <div class="bg-freshGreen/10 border border-freshGreen text-freshGreen p-8 rounded-xl text-center h-full flex flex-col items-center justify-center">
-                    <i class="fas fa-check-circle text-5xl mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-2 text-navy">Message Sent Successfully!</h3>
-                    <p class="text-gray-600 mb-6">Thank you, <strong>${name}</strong>. We have received your inquiry and will contact you shortly.</p>
-                    <button onclick="location.reload()" class="text-brightBlue font-semibold hover:underline">Send another message</button.
-                </div>
-            `;
-            
-            // 2. Open WhatsApp with pre-filled message (Optional but highly effective for immediate engagement)
-            const waMessage = `Hello KSR Enviro Tech, my name is ${name}. ${message} (My Phone: ${phone})`;
-            window.open(`https://wa.me/919843026353?text=${encodeURIComponent(waMessage)}`, '_blank');
-        });
-    </script>
-</body>
-</html>
+    <!-- Contact Form -->
+<form id="contactForm" class="space-y-5">
+    <div>
+        <label class="block text-sm font-medium text-navy mb-1">Full Name *</label>
+        <input type="text" name="name" required
+               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition"
+               placeholder="Enter your full name">
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium text-navy mb-1">Phone Number *</label>
+        <input type="tel" name="phone" required
+               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition"
+               placeholder="+91 98765 43210">
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium text-navy mb-1">Email Address</label>
+        <input type="email" name="email"
+               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition"
+               placeholder="your@email.com">
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium text-navy mb-1">Message *</label>
+        <textarea name="message" rows="4" required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition resize-none"
+                  placeholder="Tell us about your project..."></textarea>
+    </div>
+
+    <button type="submit"
+            class="w-full bg-brightBlue hover:bg-navy text-white font-semibold py-3.5 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+        <i class="fab fa-whatsapp"></i>
+        Send via WhatsApp
+    </button>
+</form>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = this.name.value.trim();
+        const phone = this.phone.value.trim();
+        const email = this.email.value.trim();
+        const message = this.message.value.trim();
+
+        const text = `Hello KSR Enviro Tech,%0A%0A` +
+                     `Name: ${name}%0A` +
+                     `Phone: ${phone}%0A` +
+                     `Email: ${email}%0A%0A` +
+                     `Message: ${message}`;
+
+        const whatsappURL = `https://wa.me/919843026353?text=${text}`;
+        window.open(whatsappURL, '_blank');
+    });
+</script>
