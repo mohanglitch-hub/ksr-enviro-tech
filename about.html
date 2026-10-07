@@ -75,7 +75,7 @@
         }
     </script>
 </head>
-<body class="font-sans text-dark antialiased bg-white">
+<body class="font-sans text-dark antialiased bg-white pb-14 sm:pb-0">
 
     <!-- Header (Consistent with Homepage) -->
     <header class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="header">
@@ -95,6 +95,7 @@
                     <a href="about.html" class="text-brightBlue font-semibold transition-colors duration-200 text-sm">About Us</a>
                     <a href="index.html#services" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Services</a>
                     <a href="index.html#projects" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Projects</a>
+                    <a href="index.html#faq" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">FAQ</a>
                     <a href="index.html#contact" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Contact Us</a>
                 </nav>
 
@@ -121,6 +122,7 @@
                 <a href="about.html" class="block px-3 py-2 text-brightBlue font-semibold rounded-lg bg-lightGrey">About Us</a>
                 <a href="index.html#services" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Services</a>
                 <a href="index.html#projects" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Projects</a>
+                <a href="index.html#faq" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">FAQ</a>
                 <a href="index.html#contact" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Contact Us</a>
                 <a href="index.html#contact" class="block mt-4 bg-brightBlue text-white px-6 py-3 rounded-lg font-semibold text-center shadow-md">Get a Quote</a>
             </div>
@@ -411,6 +413,7 @@
                         <li><a href="about.html" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> About Us</a></li>
                         <li><a href="index.html#services" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Services</a></li>
                         <li><a href="index.html#projects" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Projects</a></li>
+                        <li><a href="index.html#faq" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> FAQ</a></li>
                         <li><a href="index.html#contact" class="text-gray-400 hover:text-brightBlue transition-colors text-sm flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Contact Us</a></li>
                     </ul>
                 </div>
@@ -464,17 +467,27 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
+    <!-- Floating WhatsApp Button (tablet/desktop only - mobile uses the sticky call bar below) -->
     <a href="https://wa.me/919843026353" 
        target="_blank" 
        rel="noopener noreferrer"
-       class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 bg-waGreen text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300 group animate-pulse-slow"
+       class="hidden sm:flex fixed bottom-6 right-6 z-50 bg-waGreen text-white w-14 h-14 rounded-full items-center justify-center shadow-lg hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300 group animate-pulse-slow"
        aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
-        <span class="absolute right-14 sm:right-16 bg-navy text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-md">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-navy text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-md">
             Chat with us
         </span>
     </a>
+
+    <!-- Sticky Mobile CTA Bar (mobile only) -->
+    <div class="sm:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 shadow-[0_-4px_16px_rgba(10,37,64,0.12)] flex" style="padding-bottom: env(safe-area-inset-bottom, 0px);">
+        <a href="tel:+919843026353" class="flex-1 flex items-center justify-center gap-2 py-3.5 text-navy font-semibold text-sm border-r border-gray-200 active:bg-lightGrey transition-colors">
+            <i class="fas fa-phone-alt text-brightBlue"></i> Call Now
+        </a>
+        <a href="https://wa.me/919843026353" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 py-3.5 text-white font-semibold text-sm bg-waGreen active:bg-[#20ba5a] transition-colors">
+            <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+        </a>
+    </div>
 
     <!-- JavaScript -->
     <script>
