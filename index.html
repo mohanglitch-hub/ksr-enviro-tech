@@ -162,61 +162,63 @@
     </header>
 
     <!-- 2. Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 scroll-mt-20">
+    <section id="home" class="relative overflow-hidden bg-navy pt-28 pb-20 lg:pt-36 lg:pb-28 scroll-mt-20">
+        <!-- Texture / gradient backdrop -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1920&h=1080&fit=crop" alt="Modern Water Treatment Plant" width="1920" height="1080" fetchpriority="high" class="w-full h-full object-cover">
-            <div class="gradient-overlay absolute inset-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-navy via-navy to-[#0d2d4d]"></div>
+            <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 28px 28px;"></div>
+            <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-brightBlue/20 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-20 w-[400px] h-[400px] bg-softTeal/15 rounded-full blur-3xl"></div>
         </div>
 
-        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="inline-block py-1.5 px-4 rounded-full bg-brightBlue/20 text-white border border-white/30 text-sm font-semibold mb-6 backdrop-blur-sm">
-                Water & Wastewater Treatment Solutions
-            </span>
-            
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Engineering Sustainable<br>Water Solutions
-            </h1>
-            
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                KSR Enviro Tech and Solution provides end-to-end water and wastewater treatment solutions including design, supply, installation and commissioning of STP, ETP and RO systems for a cleaner and healthier environment.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-                <a href="#contact" class="bg-brightBlue text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-white hover:text-brightBlue transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2">
-                    Get a Quote <i class="fas fa-arrow-right text-sm"></i>
-                </a>
-                <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-white hover:text-navy transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2">
-                    Contact Us
-                </a>
-            </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-10 items-center">
+                <!-- Left: Content -->
+                <div>
+                    <span class="inline-block text-softTeal text-xs font-bold tracking-[0.15em] uppercase mb-6">
+                        Environmental Engineering &bull; Bengaluru
+                    </span>
 
-            <!-- Trust Badge -->
-            <div class="inline-flex flex-wrap justify-center items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
-                <i class="fas fa-check-circle text-freshGreen"></i>
-                <span class="text-white font-medium text-sm">Trusted Environmental Engineering Partner</span>
-                <span class="text-gray-400">|</span>
-                <span class="text-gray-200 text-sm">Bengaluru, India</span>
-                <span class="text-gray-400">|</span>
-                <span class="text-gray-200 text-sm">Est. 2021</span>
-            </div>
-        </div>
-    </section>
+                    <h1 class="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white mb-6 leading-[1.15] tracking-tight">
+                        Water treatment plants, <span class="text-freshGreen italic">engineered</span> to run for decades.
+                    </h1>
 
-    <!-- 3. Trust Bar -->
-    <section class="bg-lightGrey py-14 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-300">
-                <div class="p-4">
-                    <div class="text-4xl font-extrabold text-brightBlue mb-1">100+</div>
-                    <div class="text-navy font-semibold text-base">Projects Completed</div>
+                    <p class="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
+                        We design, supply, install and commission STP, ETP and RO systems for industries, housing societies, hospitals and commercial buildings.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-brightBlue text-white px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-white hover:text-brightBlue transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2">
+                            Request a Quote <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#projects" class="bg-transparent border-2 border-white/40 text-white px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-white hover:text-navy hover:border-white transition-all duration-300 inline-flex items-center justify-center gap-2">
+                            View Projects
+                        </a>
+                    </div>
                 </div>
-                <div class="p-4">
-                    <div class="text-4xl font-extrabold text-brightBlue mb-1">India</div>
-                    <div class="text-navy font-semibold text-base">Across India</div>
-                </div>
-                <div class="p-4">
-                    <div class="text-4xl font-extrabold text-brightBlue mb-1">24/7</div>
-                    <div class="text-navy font-semibold text-base">Expert Support</div>
+
+                <!-- Right: Stats Grid -->
+                <div class="grid grid-cols-2 gap-4 sm:gap-5">
+                    <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-6 hover:border-brightBlue/40 transition-colors duration-300">
+                        <div class="w-10 h-10 bg-brightBlue/15 rounded-lg flex items-center justify-center mb-4"><i class="fas fa-check-double text-brightBlue"></i></div>
+                        <div class="text-3xl font-extrabold text-white mb-1">100+</div>
+                        <div class="text-gray-400 text-sm font-medium">Projects Completed</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-6 hover:border-softTeal/40 transition-colors duration-300">
+                        <div class="w-10 h-10 bg-softTeal/15 rounded-lg flex items-center justify-center mb-4"><i class="fas fa-map-marked-alt text-softTeal"></i></div>
+                        <div class="text-3xl font-extrabold text-white mb-1">India</div>
+                        <div class="text-gray-400 text-sm font-medium">Across India</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-6 hover:border-freshGreen/40 transition-colors duration-300">
+                        <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center mb-4"><i class="fas fa-headset text-freshGreen"></i></div>
+                        <div class="text-3xl font-extrabold text-white mb-1">24/7</div>
+                        <div class="text-gray-400 text-sm font-medium">Expert Support</div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-6 hover:border-brightBlue/40 transition-colors duration-300">
+                        <div class="w-10 h-10 bg-brightBlue/15 rounded-lg flex items-center justify-center mb-4"><i class="fas fa-shield-alt text-brightBlue"></i></div>
+                        <div class="text-3xl font-extrabold text-white mb-1">100%</div>
+                        <div class="text-gray-400 text-sm font-medium">Compliance Focus</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -311,6 +313,28 @@
                     <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">Professional erection, commissioning and long-term technical support to keep your systems running smoothly.</p>
                     <div class="mt-auto pt-4 border-t border-gray-100"><i class="fas fa-arrow-right arrow-icon text-brightBlue transition-transform duration-300"></i></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4b. Industries Served Section -->
+    <section class="py-20 bg-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block text-softTeal text-xs font-bold tracking-[0.15em] uppercase mb-4">Industries Served</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 max-w-2xl mx-auto">Different water. Different rules. One standard of work.</h2>
+
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+                <span class="bg-white/5 border border-white/15 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:border-brightBlue/50 transition-all duration-300">Residential Societies</span>
+                <span class="bg-white/5 border border-white/15 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:border-brightBlue/50 transition-all duration-300">Hospitals</span>
+                <span class="bg-white/5 border border-white/15 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:border-brightBlue/50 transition-all duration-300">Hotels & Resorts</span>
+                <span class="bg-white/5 border border-white/15 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:border-brightBlue/50 transition-all duration-300">Manufacturing</span>
+                <span class="bg-white/5 border border-white/15 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:border-brightBlue/50 transition-all duration-300">Food & Beverage</span>
+                <span class="bg-white/5 border border-white/15 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:border-brightBlue/50 transition-all duration-300">IT Parks & Campuses</span>
+                <span class="bg-white/5 border border-white/15 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:border-brightBlue/50 transition-all duration-300">Commercial Complexes</span>
+                <span class="bg-white/5 border border-white/15 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:border-brightBlue/50 transition-all duration-300">Textile & Dyeing</span>
             </div>
         </div>
     </section>
@@ -474,65 +498,53 @@
     <section id="faq" class="py-24 bg-white scroll-mt-24">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
-                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Frequently Asked Questions</h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Answers to the questions we hear most from clients planning a water treatment project.</p>
+                <span class="inline-block text-softTeal text-xs font-bold tracking-[0.15em] uppercase mb-4">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Questions we hear often.</h2>
             </div>
 
             <div class="space-y-4">
-                <details class="group bg-lightGrey rounded-xl border border-gray-200 open:border-brightBlue/30 open:shadow-md transition-all duration-300">
+                <details open class="group bg-lightGrey rounded-xl border border-gray-200 open:border-brightBlue/30 open:shadow-md transition-all duration-300">
                     <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
-                        <span class="font-semibold text-navy text-base md:text-lg">What areas do you provide service in?</span>
-                        <i class="fas fa-chevron-down text-brightBlue flex-shrink-0 transition-transform duration-300 group-open:rotate-180"></i>
+                        <span class="font-semibold text-navy text-base md:text-lg">How do I choose the right plant capacity?</span>
+                        <span class="relative w-6 h-6 flex-shrink-0 text-brightBlue">
+                            <i class="fas fa-plus absolute inset-0 flex items-center justify-center transition-opacity duration-200 group-open:opacity-0"></i>
+                            <i class="fas fa-minus absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-open:opacity-100"></i>
+                        </span>
                     </summary>
-                    <div class="px-5 pb-5 text-gray-600 text-sm md:text-base leading-relaxed">We're based in Bengaluru, Karnataka, and execute STP, ETP and RO projects across India. Get in touch with your location and project details and we'll confirm feasibility and timelines.</div>
+                    <div class="px-5 pb-5 text-gray-600 text-sm md:text-base leading-relaxed">We size from occupancy or production data plus peak-flow factors. A site survey is free and gives you a written recommendation.</div>
                 </details>
 
                 <details class="group bg-lightGrey rounded-xl border border-gray-200 open:border-brightBlue/30 open:shadow-md transition-all duration-300">
                     <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
-                        <span class="font-semibold text-navy text-base md:text-lg">How long does an STP/ETP installation typically take?</span>
-                        <i class="fas fa-chevron-down text-brightBlue flex-shrink-0 transition-transform duration-300 group-open:rotate-180"></i>
+                        <span class="font-semibold text-navy text-base md:text-lg">How long does an installation take?</span>
+                        <span class="relative w-6 h-6 flex-shrink-0 text-brightBlue">
+                            <i class="fas fa-plus absolute inset-0 flex items-center justify-center transition-opacity duration-200 group-open:opacity-0"></i>
+                            <i class="fas fa-minus absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-open:opacity-100"></i>
+                        </span>
                     </summary>
                     <div class="px-5 pb-5 text-gray-600 text-sm md:text-base leading-relaxed">Timelines depend on plant capacity and site conditions, but most residential and commercial projects move from design to commissioning within a few weeks to a couple of months. We'll give you a firm schedule after the initial site assessment.</div>
                 </details>
 
                 <details class="group bg-lightGrey rounded-xl border border-gray-200 open:border-brightBlue/30 open:shadow-md transition-all duration-300">
                     <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
-                        <span class="font-semibold text-navy text-base md:text-lg">Do you provide AMC and maintenance support after installation?</span>
-                        <i class="fas fa-chevron-down text-brightBlue flex-shrink-0 transition-transform duration-300 group-open:rotate-180"></i>
+                        <span class="font-semibold text-navy text-base md:text-lg">Do you offer annual maintenance?</span>
+                        <span class="relative w-6 h-6 flex-shrink-0 text-brightBlue">
+                            <i class="fas fa-plus absolute inset-0 flex items-center justify-center transition-opacity duration-200 group-open:opacity-0"></i>
+                            <i class="fas fa-minus absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-open:opacity-100"></i>
+                        </span>
                     </summary>
                     <div class="px-5 pb-5 text-gray-600 text-sm md:text-base leading-relaxed">Yes. We offer Annual Maintenance Contracts along with on-call technical support, so your plant keeps running at optimal efficiency long after commissioning.</div>
                 </details>
 
                 <details class="group bg-lightGrey rounded-xl border border-gray-200 open:border-brightBlue/30 open:shadow-md transition-all duration-300">
                     <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
-                        <span class="font-semibold text-navy text-base md:text-lg">What does an STP, ETP or RO plant cost?</span>
-                        <i class="fas fa-chevron-down text-brightBlue flex-shrink-0 transition-transform duration-300 group-open:rotate-180"></i>
-                    </summary>
-                    <div class="px-5 pb-5 text-gray-600 text-sm md:text-base leading-relaxed">Cost depends on capacity, technology, site conditions and scope of civil work, so there's no one-size-fits-all number. Share your requirements via the contact form or WhatsApp and we'll put together a customized quote.</div>
-                </details>
-
-                <details class="group bg-lightGrey rounded-xl border border-gray-200 open:border-brightBlue/30 open:shadow-md transition-all duration-300">
-                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
-                        <span class="font-semibold text-navy text-base md:text-lg">Do you handle regulatory approvals and compliance?</span>
-                        <i class="fas fa-chevron-down text-brightBlue flex-shrink-0 transition-transform duration-300 group-open:rotate-180"></i>
+                        <span class="font-semibold text-navy text-base md:text-lg">Will the plant meet pollution control norms?</span>
+                        <span class="relative w-6 h-6 flex-shrink-0 text-brightBlue">
+                            <i class="fas fa-plus absolute inset-0 flex items-center justify-center transition-opacity duration-200 group-open:opacity-0"></i>
+                            <i class="fas fa-minus absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-open:opacity-100"></i>
+                        </span>
                     </summary>
                     <div class="px-5 pb-5 text-gray-600 text-sm md:text-base leading-relaxed">Yes, our engineering team designs systems to meet applicable pollution control board norms and can support you through the compliance and approval process for your plant.</div>
-                </details>
-
-                <details class="group bg-lightGrey rounded-xl border border-gray-200 open:border-brightBlue/30 open:shadow-md transition-all duration-300">
-                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
-                        <span class="font-semibold text-navy text-base md:text-lg">What project sizes do you handle?</span>
-                        <i class="fas fa-chevron-down text-brightBlue flex-shrink-0 transition-transform duration-300 group-open:rotate-180"></i>
-                    </summary>
-                    <div class="px-5 pb-5 text-gray-600 text-sm md:text-base leading-relaxed">From small residential apartment plants to large-scale industrial and institutional systems — our team scales design and equipment specifications to match your project's capacity.</div>
-                </details>
-
-                <details class="group bg-lightGrey rounded-xl border border-gray-200 open:border-brightBlue/30 open:shadow-md transition-all duration-300">
-                    <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none select-none">
-                        <span class="font-semibold text-navy text-base md:text-lg">How do I get started with a quote?</span>
-                        <i class="fas fa-chevron-down text-brightBlue flex-shrink-0 transition-transform duration-300 group-open:rotate-180"></i>
-                    </summary>
-                    <div class="px-5 pb-5 text-gray-600 text-sm md:text-base leading-relaxed">Fill out the contact form below, call us, or message us on WhatsApp with your requirements. We'll schedule a consultation to understand your needs before preparing a proposal.</div>
                 </details>
             </div>
         </div>
@@ -546,8 +558,8 @@
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ready to Start Your Water Treatment Project?</h2>
-                <p class="text-gray-300 text-xl max-w-2xl mx-auto">Get in touch with our experts for a free consultation and customized solution.</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Tell us about your water.</h2>
+                <p class="text-gray-300 text-xl max-w-2xl mx-auto">Share your requirement and our engineers will respond within one working day with next steps and a site survey slot.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -560,6 +572,10 @@
                             <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-lightGrey/40 focus:bg-white focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition-all duration-200" placeholder="Enter your full name">
                         </div>
                         <div>
+                            <label class="block text-sm font-medium text-navy mb-1">Company</label>
+                            <input type="text" name="company" class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-lightGrey/40 focus:bg-white focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition-all duration-200" placeholder="Your company or society name">
+                        </div>
+                        <div>
                             <label class="block text-sm font-medium text-navy mb-1">Phone Number *</label>
                             <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-lightGrey/40 focus:bg-white focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition-all duration-200" placeholder="+91 98765 43210">
                         </div>
@@ -568,11 +584,22 @@
                             <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-lightGrey/40 focus:bg-white focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition-all duration-200" placeholder="your@email.com">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-navy mb-1">Message *</label>
+                            <label class="block text-sm font-medium text-navy mb-1">Service Required</label>
+                            <select name="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-lightGrey/40 focus:bg-white focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition-all duration-200">
+                                <option value="">Select a service</option>
+                                <option value="STP">STP (Sewage Treatment Plant)</option>
+                                <option value="ETP">ETP (Effluent Treatment Plant)</option>
+                                <option value="RO">RO (Reverse Osmosis)</option>
+                                <option value="WTP">WTP (Water Treatment Plant)</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-navy mb-1">Your Requirement *</label>
                             <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-lightGrey/40 focus:bg-white focus:border-brightBlue focus:ring-2 focus:ring-brightBlue/20 outline-none transition-all duration-200 resize-none" placeholder="Tell us about your project..."></textarea>
                         </div>
                         <button type="submit" class="w-full bg-brightBlue hover:bg-navy text-white font-semibold py-3.5 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                            <i class="fas fa-paper-plane"></i> Send Enquiry
                         </button>
                         <p id="formStatus" class="text-sm text-center hidden" role="status"></p>
                     </form>
@@ -752,8 +779,10 @@
                     e.preventDefault();
 
                     const name = this.name.value.trim();
+                    const company = this.company.value.trim();
                     const phone = this.phone.value.trim();
                     const email = this.email.value.trim();
+                    const service = this.service.value.trim();
                     const message = this.message.value.trim();
 
                     btn.disabled = true;
@@ -774,9 +803,11 @@
                             // rather than opened automatically (auto-opening yanked focus off this page).
                             const text = "Hello KSR Enviro Tech,%0A%0A" +
                                          "Name: " + encodeURIComponent(name) + "%0A" +
+                                         (company ? "Company: " + encodeURIComponent(company) + "%0A" : "") +
                                          "Phone: " + encodeURIComponent(phone) + "%0A" +
-                                         "Email: " + encodeURIComponent(email) + "%0A%0A" +
-                                         "Message: " + encodeURIComponent(message);
+                                         "Email: " + encodeURIComponent(email) + "%0A" +
+                                         (service ? "Service: " + encodeURIComponent(service) + "%0A" : "") +
+                                         "%0AMessage: " + encodeURIComponent(message);
                             const whatsappURL = "https://wa.me/919843026353?text=" + text;
 
                             showStatus(
