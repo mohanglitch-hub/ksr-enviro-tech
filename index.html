@@ -105,6 +105,45 @@
         .service-card:hover .arrow-icon {
             transform: translateX(6px);
         }
+
+        /* Scroll-reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1);
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger > .reveal:nth-child(1) { transition-delay: 0.05s; }
+        .stagger > .reveal:nth-child(2) { transition-delay: 0.1s; }
+        .stagger > .reveal:nth-child(3) { transition-delay: 0.15s; }
+        .stagger > .reveal:nth-child(4) { transition-delay: 0.2s; }
+        .stagger > .reveal:nth-child(5) { transition-delay: 0.25s; }
+        .stagger > .reveal:nth-child(6) { transition-delay: 0.3s; }
+        .stagger > .reveal:nth-child(7) { transition-delay: 0.35s; }
+        .stagger > .reveal:nth-child(8) { transition-delay: 0.4s; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+
+        /* Active nav link while scrolling */
+        .nav-link.active { color: #0066CC; }
+        .mobile-nav-link.active { color: #0066CC; background-color: #F5F7FA; }
+
+        /* Back to top button */
+        #backToTop {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #backToTop.show {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="font-sans text-dark antialiased bg-white pb-14 sm:pb-0">
@@ -123,12 +162,12 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-10">
-                    <a href="#home" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Home</a>
+                    <a href="#home" data-section="home" class="nav-link text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Home</a>
                     <a href="about.html" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">About Us</a>
-                    <a href="#services" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Services</a>
-                    <a href="#projects" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Projects</a>
-                    <a href="#faq" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">FAQ</a>
-                    <a href="#contact" class="text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Contact Us</a>
+                    <a href="#services" data-section="services" class="nav-link text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Services</a>
+                    <a href="#projects" data-section="projects" class="nav-link text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Projects</a>
+                    <a href="#faq" data-section="faq" class="nav-link text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">FAQ</a>
+                    <a href="#contact" data-section="contact" class="nav-link text-navy hover:text-brightBlue font-medium transition-colors duration-200 text-sm">Contact Us</a>
                 </nav>
 
                 <!-- CTA Button -->
@@ -150,12 +189,12 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-xl absolute w-full z-50">
             <div class="px-4 pt-4 pb-6 space-y-3">
-                <a href="#home" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Home</a>
+                <a href="#home" data-section="home" class="mobile-nav-link block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Home</a>
                 <a href="about.html" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">About Us</a>
-                <a href="#services" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Services</a>
-                <a href="#projects" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Projects</a>
-                <a href="#faq" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">FAQ</a>
-                <a href="#contact" class="block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Contact Us</a>
+                <a href="#services" data-section="services" class="mobile-nav-link block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Services</a>
+                <a href="#projects" data-section="projects" class="mobile-nav-link block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Projects</a>
+                <a href="#faq" data-section="faq" class="mobile-nav-link block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">FAQ</a>
+                <a href="#contact" data-section="contact" class="mobile-nav-link block px-3 py-2 text-navy hover:text-brightBlue font-medium rounded-lg hover:bg-lightGrey">Contact Us</a>
                 <a href="#contact" class="block mt-4 bg-brightBlue text-white px-6 py-3 rounded-lg font-semibold text-center shadow-md">Get a Quote</a>
             </div>
         </div>
@@ -201,7 +240,7 @@
                 <div class="grid grid-cols-2 gap-4 sm:gap-5">
                     <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-6 hover:border-brightBlue/40 transition-colors duration-300">
                         <div class="w-10 h-10 bg-brightBlue/15 rounded-lg flex items-center justify-center mb-4"><i class="fas fa-check-double text-brightBlue"></i></div>
-                        <div class="text-3xl font-extrabold text-white mb-1">100+</div>
+                        <div class="text-3xl font-extrabold text-white mb-1"><span class="count-up" data-target="100">0</span>+</div>
                         <div class="text-gray-400 text-sm font-medium">Projects Completed</div>
                     </div>
                     <div class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-6 hover:border-softTeal/40 transition-colors duration-300 flex flex-col justify-center">
@@ -231,9 +270,9 @@
                 <p class="text-gray-600 text-lg leading-relaxed">We offer a complete range of water and wastewater treatment services to meet the needs of diverse industries and communities.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger">
                 <!-- Card 1 -->
-                <div class="service-card bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
+                <div class="service-card reveal bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
                     <div class="w-14 h-14 bg-softTeal/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brightBlue transition-colors duration-300">
                         <i class="fas fa-recycle text-softTeal text-2xl group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -243,7 +282,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="service-card bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
+                <div class="service-card reveal bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
                     <div class="w-14 h-14 bg-softTeal/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brightBlue transition-colors duration-300">
                         <i class="fas fa-industry text-softTeal text-2xl group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -253,7 +292,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="service-card bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
+                <div class="service-card reveal bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
                     <div class="w-14 h-14 bg-softTeal/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brightBlue transition-colors duration-300">
                         <i class="fas fa-tint text-softTeal text-2xl group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -263,7 +302,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="service-card bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
+                <div class="service-card reveal bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
                     <div class="w-14 h-14 bg-softTeal/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brightBlue transition-colors duration-300">
                         <i class="fas fa-building text-softTeal text-2xl group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -273,7 +312,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="service-card bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
+                <div class="service-card reveal bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
                     <div class="w-14 h-14 bg-softTeal/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brightBlue transition-colors duration-300">
                         <i class="fas fa-drafting-compass text-softTeal text-2xl group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -283,7 +322,7 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="service-card bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
+                <div class="service-card reveal bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
                     <div class="w-14 h-14 bg-softTeal/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brightBlue transition-colors duration-300">
                         <i class="fas fa-cogs text-softTeal text-2xl group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -293,7 +332,7 @@
                 </div>
 
                 <!-- Card 7 -->
-                <div class="service-card bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
+                <div class="service-card reveal bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
                     <div class="w-14 h-14 bg-softTeal/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brightBlue transition-colors duration-300">
                         <i class="fas fa-flask text-softTeal text-2xl group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -303,7 +342,7 @@
                 </div>
 
                 <!-- Card 8 -->
-                <div class="service-card bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
+                <div class="service-card reveal bg-white border border-gray-100 rounded-xl p-6 hover:shadow-[0_20px_45px_-15px_rgba(10,37,64,0.18)] hover:border-brightBlue/30 transition-all duration-300 hover:-translate-y-1.5 group cursor-pointer h-full flex flex-col">
                     <div class="w-14 h-14 bg-softTeal/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-brightBlue transition-colors duration-300">
                         <i class="fas fa-tools text-softTeal text-2xl group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -321,15 +360,15 @@
             <span class="inline-block text-softTeal text-xs font-bold tracking-[0.15em] uppercase mb-4">Industries Served</span>
             <h2 class="text-3xl md:text-4xl font-bold text-navy mb-12 max-w-2xl mx-auto">Different water. Different rules. One standard of work.</h2>
 
-            <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
-                <span class="bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Residential Societies</span>
-                <span class="bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Hospitals</span>
-                <span class="bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Hotels & Resorts</span>
-                <span class="bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Manufacturing</span>
-                <span class="bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Food & Beverage</span>
-                <span class="bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">IT Parks & Campuses</span>
-                <span class="bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Commercial Complexes</span>
-                <span class="bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Textile & Dyeing</span>
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4 stagger">
+                <span class="reveal bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Residential Societies</span>
+                <span class="reveal bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Hospitals</span>
+                <span class="reveal bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Hotels & Resorts</span>
+                <span class="reveal bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Manufacturing</span>
+                <span class="reveal bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Food & Beverage</span>
+                <span class="reveal bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">IT Parks & Campuses</span>
+                <span class="reveal bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Commercial Complexes</span>
+                <span class="reveal bg-white border border-gray-200 text-navy px-5 py-2.5 rounded-full text-sm font-medium shadow-sm hover:border-brightBlue hover:text-brightBlue hover:shadow-md transition-all duration-300">Textile & Dyeing</span>
             </div>
         </div>
     </section>
@@ -339,11 +378,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
                 <!-- Image Left -->
-                <div class="relative rounded-2xl overflow-hidden shadow-xl h-full min-h-[400px]">
+                <div class="reveal relative rounded-2xl overflow-hidden shadow-xl h-full min-h-[400px]">
                     <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&h=800&fit=crop" alt="Water Treatment Project" width="800" height="800" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-navy/20"></div>
                     <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-                        <div class="text-4xl font-extrabold text-brightBlue">100+</div>
+                        <div class="text-4xl font-extrabold text-brightBlue"><span class="count-up" data-target="100">0</span>+</div>
                         <div class="text-navy font-semibold text-sm">Successful Projects Delivered</div>
                     </div>
                 </div>
@@ -354,7 +393,7 @@
                     <div class="w-16 h-1 bg-freshGreen mb-6"></div>
                     <p class="text-gray-600 mb-10 text-lg leading-relaxed">At KSR Enviro Tech and Solution, we combine technical expertise, quality systems and a customer-first approach to deliver sustainable and cost-effective water treatment solutions.</p>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+                    <div class="reveal grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8" style="transition-delay: 0.1s;">
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 bg-freshGreen/15 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-shield-alt text-freshGreen text-lg"></i></div>
                             <div><h4 class="text-navy font-bold mb-1">Proven Experience</h4><p class="text-gray-600 text-sm">100+ successful projects</p></div>
@@ -397,35 +436,35 @@
             <div class="grid grid-cols-1 md:grid-cols-5 gap-y-12 gap-x-8 relative">
                 <div class="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-brightBlue/20 via-brightBlue/40 to-brightBlue/20"></div>
 
-                <div class="relative text-center group">
+                <div class="relative text-center group reveal">
                     <div class="relative w-20 h-20 bg-white border-2 border-softTeal/30 rounded-full flex items-center justify-center mx-auto mb-5 shadow-md group-hover:border-brightBlue group-hover:shadow-lg transition-all duration-300 z-10">
                         <i class="fas fa-comments text-softTeal text-2xl group-hover:text-brightBlue transition-colors duration-300"></i>
                         <span class="absolute -top-2 -right-2 w-7 h-7 bg-brightBlue text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">1</span>
                     </div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Consultation &<br>Requirement Analysis</h3>
                 </div>
-                <div class="relative text-center group">
+                <div class="relative text-center group reveal">
                     <div class="relative w-20 h-20 bg-white border-2 border-softTeal/30 rounded-full flex items-center justify-center mx-auto mb-5 shadow-md group-hover:border-brightBlue group-hover:shadow-lg transition-all duration-300 z-10">
                         <i class="fas fa-drafting-compass text-softTeal text-2xl group-hover:text-brightBlue transition-colors duration-300"></i>
                         <span class="absolute -top-2 -right-2 w-7 h-7 bg-brightBlue text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">2</span>
                     </div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Design &<br>Engineering</h3>
                 </div>
-                <div class="relative text-center group">
+                <div class="relative text-center group reveal">
                     <div class="relative w-20 h-20 bg-white border-2 border-softTeal/30 rounded-full flex items-center justify-center mx-auto mb-5 shadow-md group-hover:border-brightBlue group-hover:shadow-lg transition-all duration-300 z-10">
                         <i class="fas fa-truck-loading text-softTeal text-2xl group-hover:text-brightBlue transition-colors duration-300"></i>
                         <span class="absolute -top-2 -right-2 w-7 h-7 bg-brightBlue text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">3</span>
                     </div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Supply &<br>Installation</h3>
                 </div>
-                <div class="relative text-center group">
+                <div class="relative text-center group reveal">
                     <div class="relative w-20 h-20 bg-white border-2 border-softTeal/30 rounded-full flex items-center justify-center mx-auto mb-5 shadow-md group-hover:border-brightBlue group-hover:shadow-lg transition-all duration-300 z-10">
                         <i class="fas fa-vial text-softTeal text-2xl group-hover:text-brightBlue transition-colors duration-300"></i>
                         <span class="absolute -top-2 -right-2 w-7 h-7 bg-brightBlue text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">4</span>
                     </div>
                     <h3 class="text-navy font-bold mb-2 text-lg">Commissioning &<br>Testing</h3>
                 </div>
-                <div class="relative text-center group">
+                <div class="relative text-center group reveal">
                     <div class="relative w-20 h-20 bg-white border-2 border-softTeal/30 rounded-full flex items-center justify-center mx-auto mb-5 shadow-md group-hover:border-brightBlue group-hover:shadow-lg transition-all duration-300 z-10">
                         <i class="fas fa-headset text-softTeal text-2xl group-hover:text-brightBlue transition-colors duration-300"></i>
                         <span class="absolute -top-2 -right-2 w-7 h-7 bg-brightBlue text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">5</span>
@@ -444,8 +483,8 @@
                 <div class="w-16 h-1 bg-freshGreen mx-auto mb-6"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger">
+                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72 reveal">
                     <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=400&h=300&fit=crop" alt="Industrial STP Project" width="400" height="300" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
                     <div class="absolute bottom-0 left-0 p-6">
@@ -454,7 +493,7 @@
                         <p class="text-gray-300 text-xs leading-snug">250 KLD capacity sewage treatment plant for a large industrial facility</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72">
+                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72 reveal">
                     <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=400&h=300&fit=crop" alt="Residential ETP" width="400" height="300" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
                     <div class="absolute bottom-0 left-0 p-6">
@@ -463,7 +502,7 @@
                         <p class="text-gray-300 text-xs leading-snug">Efficient effluent treatment system for a multi-tower residential township</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72">
+                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72 reveal">
                     <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop" alt="Commercial RO System" width="400" height="300" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
                     <div class="absolute bottom-0 left-0 p-6">
@@ -472,7 +511,7 @@
                         <p class="text-gray-300 text-xs leading-snug">High-capacity reverse osmosis plant for commercial and institutional use</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72">
+                <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer h-72 reveal">
                     <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=400&h=300&fit=crop" alt="Hospital Water Treatment" width="400" height="300" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
                     <div class="absolute bottom-0 left-0 p-6">
@@ -497,7 +536,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Questions we hear often.</h2>
             </div>
 
-            <div class="space-y-4" id="faqAccordion">
+            <div class="reveal space-y-4" id="faqAccordion">
                 <div class="faq-item bg-lightGrey rounded-xl border border-gray-200 transition-all duration-300">
                     <button type="button" class="faq-toggle w-full flex items-center justify-between gap-4 p-5 text-left" aria-expanded="true">
                         <span class="font-semibold text-navy text-base md:text-lg">How do I choose the right plant capacity?</span>
@@ -542,7 +581,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <!-- Left: Content -->
-                <div>
+                <div class="reveal">
                     <span class="inline-block text-softTeal text-xs font-bold tracking-[0.15em] uppercase mb-4">Contact</span>
                     <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Tell us about your water.</h2>
                     <p class="text-gray-300 text-lg mb-6 leading-relaxed">Share your requirement and our engineers will respond within one working day with next steps and a site survey slot.</p>
@@ -585,7 +624,7 @@
                 </div>
 
                 <!-- Right: Contact Form -->
-                <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                <div class="reveal bg-white rounded-2xl p-8 shadow-2xl" style="transition-delay: 0.15s;">
                     <h3 class="text-2xl font-bold text-navy mb-6">Send us a Message</h3>
                     <form id="contactForm" action="https://formspree.io/f/mnpngbwq" method="POST" class="space-y-5">
                         <div>
@@ -682,6 +721,11 @@
         </div>
     </footer>
 
+    <!-- 9b. Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top" class="fixed bottom-20 left-5 sm:bottom-6 sm:left-6 z-40 w-11 h-11 bg-navy/90 hover:bg-brightBlue text-white rounded-full shadow-lg flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- 10. Floating WhatsApp Button (tablet/desktop only - mobile uses the sticky call bar below) -->
     <a href="https://wa.me/919843026353" 
        target="_blank" 
@@ -748,6 +792,84 @@
                     }
                 });
             });
+
+            // Scroll-Reveal Animations
+            const revealEls = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window && revealEls.length) {
+                const revealObserver = new IntersectionObserver(function(entries, obs) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+                revealEls.forEach(function(el) { revealObserver.observe(el); });
+            } else {
+                revealEls.forEach(function(el) { el.classList.add('is-visible'); });
+            }
+
+            // Animated Count-Up Stats
+            const countEls = document.querySelectorAll('.count-up');
+            function animateCount(el) {
+                const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+                const duration = 1200;
+                const startTime = performance.now();
+                function tick(now) {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(eased * target);
+                    if (progress < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            }
+            if ('IntersectionObserver' in window && countEls.length) {
+                const countObserver = new IntersectionObserver(function(entries, obs) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            animateCount(entry.target);
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                countEls.forEach(function(el) { countObserver.observe(el); });
+            } else {
+                countEls.forEach(function(el) { el.textContent = el.getAttribute('data-target'); });
+            }
+
+            // Active Nav Link Highlighting While Scrolling
+            const sections = Array.from(document.querySelectorAll('section[id]'));
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            function setActiveNav(id) {
+                navLinks.forEach(function(link) {
+                    link.classList.toggle('active', link.getAttribute('data-section') === id);
+                });
+                mobileNavLinks.forEach(function(link) {
+                    link.classList.toggle('active', link.getAttribute('data-section') === id);
+                });
+            }
+            if ('IntersectionObserver' in window && sections.length) {
+                const navObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            setActiveNav(entry.target.id);
+                        }
+                    });
+                }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+                sections.forEach(function(sec) { navObserver.observe(sec); });
+            }
+
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', function() {
+                    backToTop.classList.toggle('show', window.scrollY > 500);
+                });
+                backToTop.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
 
             // FAQ Accordion
             document.querySelectorAll('.faq-toggle').forEach(function(btn) {
