@@ -186,6 +186,21 @@
             .reveal { opacity: 1; transform: none; transition: none; }
         }
 
+        /* Trusted By logo marquee */
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            animation: marquee 32s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track { animation: none; }
+        }
+
         /* Active nav link while scrolling */
         .nav-link.active { color: #0066CC; }
         .mobile-nav-link.active { color: #0066CC; background-color: #F5F7FA; }
@@ -322,20 +337,36 @@
     </section>
 
     <!-- 3b. Trusted By Section -->
-    <section class="py-14 bg-white border-b border-gray-100">
+    <section class="py-14 bg-white border-b border-gray-100 overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-xs font-bold tracking-[0.15em] uppercase text-gray-400 mb-8">Trusted By Leading Organizations</p>
-            <div class="reveal stagger flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">Cinda Engineering</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">Sandhar Technologies</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">Organica Aromatics</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">Bluestar India</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">Amar Raja Group</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">Vydehi Institute of Medical Sciences</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">Sterling Tools Limited</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">SUA Explosives & Accessories</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">BGR Energy Systems</span>
-                <span class="text-navy/70 font-bold text-base sm:text-lg tracking-tight hover:text-brightBlue transition-colors duration-300">Gradient Engineers</span>
+            <p class="text-center text-xs font-bold tracking-[0.15em] uppercase text-gray-400 mb-8">Trusted by Forward-Thinking Organizations</p>
+        </div>
+        <div class="relative overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="marquee-track flex items-center gap-5 w-max">
+                <!-- Set 1 -->
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">Cinda Engineering</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">Sandhar Technologies</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">Organica Aromatics</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">Bluestar India</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">Amar Raja Group</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">Vydehi Institute of Medical Sciences</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">Sterling Tools Limited</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">SUA Explosives & Accessories</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">BGR Energy Systems</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300">Gradient Engineers</span>
+                <!-- Set 2 (duplicate, creates the seamless loop) -->
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">Cinda Engineering</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">Sandhar Technologies</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">Organica Aromatics</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">Bluestar India</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">Amar Raja Group</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">Vydehi Institute of Medical Sciences</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">Sterling Tools Limited</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">SUA Explosives & Accessories</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">BGR Energy Systems</span>
+                <span class="flex-shrink-0 bg-lightGrey border border-gray-200 rounded-lg px-6 py-3 text-navy font-bold text-sm sm:text-base whitespace-nowrap hover:border-brightBlue/40 hover:text-brightBlue transition-colors duration-300" aria-hidden="true">Gradient Engineers</span>
             </div>
         </div>
     </section>
